@@ -1,27 +1,28 @@
 package com.hoan.FoodOrdering.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class OrderItem {
+public class IngredientsItem {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    private String name;
+
     @ManyToOne
-    private Food food;
+    private IngredientCategory category;
 
-    private int quantity;
+    @JsonIgnore
+    @ManyToOne
+    private Restaurant restaurant;
 
-    private Long totalPrice;
-
-    private List<String> ingredients;
+    private boolean inStoke=true;
 }
