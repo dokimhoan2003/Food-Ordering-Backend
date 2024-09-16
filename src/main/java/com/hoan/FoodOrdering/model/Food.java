@@ -22,7 +22,7 @@ public class Food {
 
     private String description;
 
-    private String price;
+    private Long price;
 
     @ManyToOne
     private Category foodCategory;
