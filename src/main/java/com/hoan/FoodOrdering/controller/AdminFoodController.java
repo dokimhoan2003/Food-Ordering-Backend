@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/admin/foods")
-
 public class AdminFoodController {
 
     @Autowired

@@ -1,5 +1,6 @@
 package com.hoan.FoodOrdering.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,6 +18,7 @@ public class OrderItem {
     private Long id;
 
     @ManyToOne
+    @JsonBackReference
     private Food food;
 
     private int quantity;
