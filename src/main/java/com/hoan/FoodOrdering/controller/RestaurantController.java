@@ -6,6 +6,7 @@ import com.hoan.FoodOrdering.model.User;
 import com.hoan.FoodOrdering.request.RestaurantRequest;
 import com.hoan.FoodOrdering.service.RestaurantService;
 import com.hoan.FoodOrdering.service.UserService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
